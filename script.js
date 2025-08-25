@@ -91,3 +91,32 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         }
     });
 });
+
+
+// Why-Choose-Us
+// Function to check if element is in viewport
+function isInViewport(element) {
+    const rect = element.getBoundingClientRect();
+    return (
+        rect.top >= 0 &&
+        rect.left >= 0 &&
+        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    );
+}
+
+// Function to handle scroll animation
+function handleScrollAnimation() {
+    const elements = document.querySelectorAll('.fade-in');
+    elements.forEach(element => {
+        if (isInViewport(element)) {
+            element.classList.add('visible');
+        }
+    });
+}
+
+// Initial check on page load
+document.addEventListener('DOMContentLoaded', handleScrollAnimation);
+
+// Check on scroll
+window.addEventListener('scroll', handleScrollAnimation);
