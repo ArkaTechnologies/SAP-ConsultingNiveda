@@ -12,23 +12,43 @@ window.addEventListener('load', function () {
 // Navbar scroll behavior
 let lastScrollTop = 0;
 const navbar = document.querySelector('.navbar');
+const navbarbrand = document.querySelector('.navbar-brand');
+const navlink = document.querySelector('.nav-link');
+const offcanvas = document.querySelector('.offcanvas-nav');
 
 window.addEventListener('scroll', function () {
     let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
     if (scrollTop > 50) {
         navbar.classList.add('scrolled');
+        navbarbrand.classList.add('scrolled');
+        navlink.classList.add('scrolled');
+        offcanvas.classList.add('scrolled');
+
 
         if (scrollTop > lastScrollTop) {
             // Scroll down - hide navbar
             navbar.style.transform = 'translateY(-100%)';
+            navbarbrand.style.transform = 'translateY(-100%)';
+            navlink.style.transform = 'translateY(-100%)';
+            offcanvas.style.transform = 'translateY(-100%)';
         } else {
             // Scroll up - show navbar
             navbar.style.transform = 'translateY(0)';
+            navbarbrand.style.transform = 'translateY(0)';
+            navlink.style.transform = 'translateY(0)';
+            offcanvas.style.transform = 'translateY(0)';
         }
     } else {
         navbar.classList.remove('scrolled');
+        navbarbrand.classList.remove('scrolled');
+        navlink.classList.remove('scrolled');
+        offcanvas.classList.remove('scrolled');
+        
         navbar.style.transform = 'translateY(0)';
+        navbarbrand.style.transform = 'translateY(0)';
+        navlink.style.transform = 'translateY(0)';
+        offcanvas.style.transform = 'translateY(0)';
     }
 
     lastScrollTop = scrollTop;
@@ -42,31 +62,21 @@ window.addEventListener('scroll', function () {
     }
 });
 
-// Contact modal functionality
-const contactLinks = document.querySelectorAll('#contact-link, #contact-btn, #contact-btn-2, #demo-btn, #demo-btn-2');
-const contactModal = document.getElementById('contact-modal');
-const closeModal = document.getElementById('close-modal');
+// Navbar toggle for mobile
+    const navToggle = document.getElementById("navToggle");
+    const navbarLinks = document.getElementById("navbarLinks");
 
-contactLinks.forEach(link => {
-    link.addEventListener('click', function (e) {
-        e.preventDefault();
-        contactModal.classList.add('active');
-        document.body.style.overflow = 'hidden';
+    // Toggle open/close
+    navToggle.addEventListener("click", () => {
+        navbarLinks.classList.toggle("show");
     });
-});
 
-closeModal.addEventListener('click', function () {
-    contactModal.classList.remove('active');
-    document.body.style.overflow = 'auto';
-});
-
-// Close modal when clicking outside
-contactModal.addEventListener('click', function (e) {
-    if (e.target === contactModal) {
-        contactModal.classList.remove('active');
-        document.body.style.overflow = 'auto';
-    }
-});
+    // Close on scroll
+    window.addEventListener("scroll", () => {
+        if (navbarLinks.classList.contains("show")) {
+        navbarLinks.classList.remove("show");
+        }
+    });
 
 // Back to top functionality
 document.getElementById('back-to-top').addEventListener('click', function () {
@@ -95,28 +105,28 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
 // Why-Choose-Us
 // Function to check if element is in viewport
-function isInViewport(element) {
-    const rect = element.getBoundingClientRect();
-    return (
-        rect.top >= 0 &&
-        rect.left >= 0 &&
-        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-    );
-}
-
-// Function to handle scroll animation
-function handleScrollAnimation() {
-    const elements = document.querySelectorAll('.fade-in');
-    elements.forEach(element => {
-        if (isInViewport(element)) {
-            element.classList.add('visible');
+        function isInViewport(element) {
+            const rect = element.getBoundingClientRect();
+            return (
+                rect.top >= 0 &&
+                rect.left >= 0 &&
+                rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+                rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+            );
         }
-    });
-}
 
-// Initial check on page load
-document.addEventListener('DOMContentLoaded', handleScrollAnimation);
+        // Function to handle scroll animation
+        function handleScrollAnimation() {
+            const elements = document.querySelectorAll('.fade-in');
+            elements.forEach(element => {
+                if (isInViewport(element)) {
+                    element.classList.add('visible');
+                }
+            });
+        }
 
-// Check on scroll
-window.addEventListener('scroll', handleScrollAnimation);
+        // Initial check on page load
+        document.addEventListener('DOMContentLoaded', handleScrollAnimation);
+        
+        // Check on scroll
+        window.addEventListener('scroll', handleScrollAnimation);

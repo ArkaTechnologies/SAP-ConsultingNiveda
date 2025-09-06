@@ -27,22 +27,32 @@
     <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container">
             <a class="navbar-brand" href="#">Bhargava<span>Niveda</span></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <button class="navbar-toggler" type="button" id="navToggle" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
+            <div class="collapse navbar-collapse">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="#company">Company</a></li>
                     <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
                     <li class="nav-item"><a class="nav-link" href="#courses">Courses</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#founder">Founder</a></li>
                     <li class="nav-item"><a class="nav-link" href="#training-modes">Training Mode</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#" id="contact-link">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#founder">Founder</a></li>
+                    <li class="nav-item"><a class="nav-link" href="https://wa.me/919392919297">Contact</a></li>
                 </ul>
             </div>
         </div>
     </nav>
+
+    <ul class="offcanvas-nav" id="navbarLinks">
+        <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#company">Company</a></li>
+        <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+        <li class="nav-item"><a class="nav-link" href="#courses">Courses</a></li>
+        <li class="nav-item"><a class="nav-link" href="#training-modes">Training Mode</a></li>
+        <li class="nav-item"><a class="nav-link" href="#founder">Founder</a></li>
+        <li class="nav-item"><a class="nav-link" href="https://wa.me/919392919297">Contact</a></li>
+    </ul>
 
     <!-- Hero Section -->
     <section class="hero" id="home">
@@ -53,7 +63,7 @@
                     hands-on projects, career guidance, and lifetime access.</p>
                 <div class="hero-buttons">
                     <a href="#courses" class="btn btn-primary">Explore Courses</a>
-                    <a href="#" class="btn btn-outline-light" id="demo-btn">Get Free Demo</a>
+                    <a class="btn btn-outline-light" href="https://wa.me/919392919297">Get Free Demo</a>
                 </div>
             </div>
         </div>
@@ -65,27 +75,36 @@
             <div class="section-title">
                 <h2>About BhargavaNiveda Consulting</h2>
             </div>
-            
+
             <div class="row">
                 <div class="col-lg-6">
                     <div class="about-content">
                         <p class="about-text">
-                            BhargavaNiveda Consulting is a distinguished multinational professional services firm headquartered in Bangalore, India. Established in 2024 by renowned accountant Nindra Rathna Manjusha, the firm has quickly emerged as a trusted name in the global professional services landscape.
+                            BhargavaNiveda Consulting is a distinguished multinational professional services firm
+                            headquartered in Bangalore, India. Established in 2024 by renowned accountant Nindra Rathna
+                            Manjusha, the firm has quickly emerged as a trusted name in the global professional services
+                            landscape.
                         </p>
-                        
+
                         <p class="about-text">
-                            With a comprehensive portfolio that includes audit, consulting, financial advisory, risk advisory, tax, and legal services, BhargavaNiveda is committed to delivering high-impact solutions that drive sustainable growth and operational excellence for clients worldwide.
+                            With a comprehensive portfolio that includes audit, consulting, financial advisory, risk
+                            advisory, tax, and legal services, BhargavaNiveda is committed to delivering high-impact
+                            solutions that drive sustainable growth and operational excellence for clients worldwide.
                         </p>
-                        
+
                         <p class="about-text">
-                            Supported by a team of approximately 50 dedicated professionals across the globe, BhargavaNiveda Consulting combines deep industry expertise with a forward-thinking approach to help organizations navigate complexity and seize opportunities in an ever-evolving business environment.
+                            Supported by a team of approximately 50 dedicated professionals across the globe,
+                            BhargavaNiveda Consulting combines deep industry expertise with a forward-thinking approach
+                            to help organizations navigate complexity and seize opportunities in an ever-evolving
+                            business environment.
                         </p>
                     </div>
                 </div>
-                
+
                 <div class="col-lg-6">
                     <div class="about-img">
-                        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&h=400&q=80" alt="BhargavaNiveda Consulting Team" class="img-fluid">
+                        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&h=400&q=80"
+                            alt="BhargavaNiveda Consulting Team" class="img-fluid">
                     </div>
                 </div>
             </div>
@@ -346,7 +365,8 @@
                 <div class="col-md-6 contact py-0">
                     <div class="future-together">
                         <h2>Let’s Build the Future Together</h2>
-                        <p class="py-3">Whether you're starting your digital transformation journey or optimizing existing systems,
+                        <p class="py-3">Whether you're starting your digital transformation journey or optimizing
+                            existing systems,
                             BhargavaNiveda is here to support you.</p>
                     </div>
                     <div class="card p-5">
@@ -356,7 +376,8 @@
                             <p><i class="fas fa-phone me-2"></i> +91 9392919297, +91 7674807103</p>
                             <p><i class="fas fa-map-marker-alt me-2"></i> Bengaluru, Karnataka, India</p>
                         </div>
-                        <a href="#" class="btn btn-primary" id="contact-btn-2">Contact Us</a>
+                        <a class="btn btn-primary" id="contact-btn-2" href="https://wa.me/919392919297"><i
+                                class="fab fa-whatsapp me-2"></i> WhatsApp</a>
                     </div>
                 </div>
             </div>
@@ -429,7 +450,7 @@
                 </div>
                 <div class="col-md-4 mb-4">
                     <div class="industry-card">
-                        <img src="https://cloudfoundation.com/blog/wp-content/uploads/2024/06/SAP-Healthcare-monitoring.jpg"
+                        <img src="https://ikyam.com/wp-content/uploads/2024/07/Healthcare-desktop.webp"
                             alt="Healthcare" class="industry-img">
                         <div class="industry-overlay">
                             <h4>Healthcare</h4>
@@ -639,7 +660,7 @@
                 <h2>Our Founder</h2>
             </div>
             <div class="row align-items-center">
-                <div class="col-lg-10">
+                <div class="col-lg-8">
                     <h3>Nindra Rathna Manjusha</h3>
                     <p class="text-primary">Founder & Managing Director, BhargavaNiveda Consulting</p>
                     <p>BhargavaNiveda Consulting was established in 2024 under the visionary leadership of <span>Nindra
@@ -650,7 +671,8 @@
                         success.</p>
                     <p>As the Founder and Managing Director, she brings a unique blend of strategic foresight, financial
                         expertise, and people-centric leadership, ensuring that BhargavaNiveda Consulting stands as a
-                        <span>trusted partner for organizations worldwide</span>.</p>
+                        <span>trusted partner for organizations worldwide</span>.
+                    </p>
                     <p>Under her stewardship, the firm has expanded into a <span>multinational professional services
                             company</span> headquartered in Bangalore, India, offering a comprehensive portfolio of
                         services including:</p>
@@ -730,58 +752,18 @@
         </div>
     </section>
 
-    <!-- Faculty Section -->
-    <section id="faculty" class="bg-light py-3">
-        <div class="container">
-            <div class="section-title">
-                <h2>Our Faculty</h2>
-            </div>
-            <div class="row">
-                <div class="col-md-4 mb-4">
-                    <div class="faculty-card">
-                        <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
-                            alt="Faculty" class="card-img-top">
-                        <div class="card-body p-3">
-                            <h4>Nindra Rathna Manjusha</h4>
-                            <p class="text-muted">Founder & Managing Director</p>
-                            <p>SAP certified professional with 14+ years of industry experience.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <div class="faculty-card">
-                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
-                            alt="Faculty" class="card-img-top">
-                        <div class="card-body p-3">
-                            <h4>Rajesh Kumar</h4>
-                            <p class="text-muted">SAP FICO Expert</p>
-                            <p>10+ years of experience in SAP Financials implementation.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <div class="faculty-card">
-                        <img src="https://images.unsplash.com/photo-1614289371518-722f2615943d?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
-                            alt="Faculty" class="card-img-top">
-                        <div class="card-body p-3">
-                            <h4>Priya Sharma</h4>
-                            <p class="text-muted">SAP ABAP Specialist</p>
-                            <p>8+ years of experience in custom SAP development.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- CTA Section -->
     <section class="cta-section">
         <div class="container">
             <h2 class="mb-4">👉 Start Your SAP Career with Us Today!</h2>
             <p class="lead mb-5">Join thousands of successful SAP professionals who started their journey with
                 BhargavaNiveda</p>
-            <a href="#" class="btn btn-primary me-3" id="demo-btn-2">Enroll Now</a>
-            <a href="#" class="btn btn-outline-light" id="demo-btn-2">Book a Free Demo</a>
+            <a class="btn btn-primary me-3" id="demo-btn-2" href="tel:+919392919297"><i class="fas fa-phone me-2"></i>
+                Enroll Now</a>
+            <!-- <a href="#" class="btn btn-primary me-3" id="demo-btn-2">Enroll Now</a> -->
+            <a class="btn btn-outline-light" id="demo-btn-2" href="https://wa.me/919392919297" target="_blank">Book a
+                Free Demo</a>
+            <!-- <a href="#" class="btn btn-outline-light" id="demo-btn-2">Book a Free Demo</a> -->
         </div>
     </section>
 
@@ -820,6 +802,10 @@
                             <li><a href="#courses">SAP ABAP</a></li>
                             <li><a href="#courses">SAP SD</a></li>
                             <li><a href="#courses">SAP MM</a></li>
+                            <li><a href="#courses">SAP MDG</a></li>
+                            <li><a href="#courses">SAP PAPM</a></li>
+                            <li><a href="#courses">SAP GR</a></li>
+                            <li><a href="#courses">SAP BTP</a></li>
                             <li><a href="#courses">Learn More</a></li>
                         </ul>
                     </div>
@@ -841,45 +827,6 @@
             </div>
         </div>
     </footer>
-
-    <!-- Contact Modal -->
-    <div class="contact-modal" id="contact-modal">
-        <div class="contact-form">
-            <span class="close-modal" id="close-modal">&times;</span>
-            <h3 class="mb-4">Contact Us</h3>
-            <form>
-                <div class="row">
-                    <div class="col-md-6">
-                        <input type="text" class="form-control" placeholder="Full Name" required>
-                    </div>
-                    <div class="col-md-6">
-                        <input type="email" class="form-control" placeholder="Email Address" required>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-6">
-                        <input type="tel" class="form-control" placeholder="Mobile Number" required>
-                    </div>
-                    <div class="col-md-6">
-                        <select class="form-control" required>
-                            <option value="" disabled selected>Select Course</option>
-                            <option value="sap-fico">SAP FICO</option>
-                            <option value="sap-abap">SAP ABAP</option>
-                            <option value="sap-sd">SAP SD</option>
-                            <option value="sap-mm">SAP MM</option>
-                            <option value="sap-mdg">SAP MDG</option>
-                            <option value="sap-papm">SAP PAPM</option>
-                            <option value="sap-group-reporting">SAP Group Reporting</option>
-                            <option value="sap-btp">SAP BTP</option>
-                            <option value="sap-central-finance">SAP Central Finance</option>
-                        </select>
-                    </div>
-                </div>
-                <textarea class="form-control" rows="5" placeholder="Your Message" required></textarea>
-                <button type="submit" class="btn btn-primary w-100">Submit</button>
-            </form>
-        </div>
-    </div>
 
     <!-- Floating Support -->
     <div class="floating-support">
